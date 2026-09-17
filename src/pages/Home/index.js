@@ -2,7 +2,6 @@ import api from "../../services/api";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import './home.css'
-import Filmes from "../Filmes";
 
 // /movie/popular?api_key=4e059ea6e686381cc29209028a78c2fa&language=pt-BR
 

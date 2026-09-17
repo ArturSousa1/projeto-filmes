@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import axios from "axios";
 import api from "../../services/api";
 import "./filme-info.css"
 import { toast } from "react-toastify";
@@ -31,7 +30,7 @@ function Filmes() {
             }).catch(() => { // execute isso se der erro
 
                 navigate("/", { replace: true }) // está linha redireciona o usuario para a página inicial, sem o replace se o usuario apertar em voltar iria para a pagina invalida, por isso o replace true, substitui a invalida para home.  ou seja remova a pagina invalida do historico.
-                
+
                 return; //encerra a função / acabou/ pare tudo aqui
             })
         }
@@ -52,7 +51,7 @@ function Filmes() {
 
         //existe algum item salvo com esse id?
         const hasFilme = filmesSalvos.some((filmesSalvo) => filmesSalvo.id === filme.id) // some verifica se algum item atende a condição e  retorna true or false.
-       
+
 
         if (hasFilme) { // esse filme já foi salvo?
 
@@ -81,7 +80,7 @@ function Filmes() {
     }
 
 
-     // Oque será mostrado na tela.
+    // Oque será mostrado na tela.
     return (
         <div className="filme-info">
             <h1>{filme.title}</h1>
